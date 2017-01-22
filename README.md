@@ -1,6 +1,6 @@
 # NAME
 
-Webservice::Swapi - It's new $module
+Webservice::Swapi - It's Perl module to interface with the Star Wars API (swapi.co) webservice.
 
 # SYNOPSIS
 
@@ -8,7 +8,7 @@ Webservice::Swapi - It's new $module
 
 # DESCRIPTION
 
-Webservice::Swapi is ...
+Webservice::Swapi is a Perl client helper library for the Star Wars API (swapi.co).
 
 # LICENSE
 
