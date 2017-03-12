@@ -1,7 +1,10 @@
 package Webservice::Swapi;
+
 use 5.008001;
 use strict;
 use warnings;
+
+use Moo;
 
 our $VERSION = "0.01";
 
