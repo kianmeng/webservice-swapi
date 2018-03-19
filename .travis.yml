@@ -8,10 +8,7 @@ before_install:
   - build-dist
   - cd $BUILD_DIR
 install:
-  - cpan-install Minilla
   - cpan-install --deps
   - cpan-install --coverage
-script:
-  - minil test
 perl:
   - "5.26"
