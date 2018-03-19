@@ -1,0 +1,6 @@
+sudo: false
+language: perl
+install:
+  - cpanm -nq --installdeps --with-develop --with-recommends .
+perl:
+  - "5.26"
