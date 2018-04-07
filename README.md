@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/kianmeng/webservice-swapi.svg?branch=master)](https://travis-ci.org/kianmeng/webservice-swapi)
 # NAME
 
 Webservice::Swapi - It's Perl module to interface with the Star Wars API (swapi.co) webservice.

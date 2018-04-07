@@ -8,6 +8,12 @@ use Moo;
 
 our $VERSION = "0.01";
 
+has api_url => (
+	is => 'ro',
+	default => sub { 'http://swapi.co/api' },
+);
+
+
 1;
 __END__
 
