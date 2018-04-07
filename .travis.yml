@@ -1,6 +1,8 @@
 sudo: false
 language: perl
 install:
-  - cpanm -nq --installdeps --with-develop --with-recommends .
+  - cpanm -nq --installdeps Minilla
+script:
+  - minil test
 perl:
   - "5.26"
