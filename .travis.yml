@@ -1,5 +1,7 @@
-sudo: false
 language: perl
+perl:
+  - "5.26"
+sudo: false
 before_install:
   - git clone git://github.com/travis-perl/helpers ~/travis-perl-helpers
   - source ~/travis-perl-helpers/init
@@ -10,5 +12,9 @@ before_install:
 install:
   - cpan-install --deps
   - cpan-install --coverage
-perl:
-  - "5.26"
+notifications:
+  recipients:
+    - kianmeng@users.noreply.github.com
+  email:
+    on_success: change
+    on_failure: always
