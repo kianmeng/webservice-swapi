@@ -5,13 +5,28 @@ use strict;
 use warnings;
 
 use Moo;
+with 'Role::REST::Client';
 
-our $VERSION = "0.01";
+our $VERSION = "0.1.0";
 
 has api_url => (
 	is => 'ro',
-	default => sub { 'http://swapi.co/api' },
+	default => sub { 'http://swapi.co/api/' },
 );
+
+sub request {
+	my ($self, $object, $id) = @_;
+
+	$self->server($self->api_url);
+
+	my @params;
+	push @params, $object;
+	push @params, $id if (defined $id);
+
+	my $response = $self->get(join('/', @params));
+
+	return $response->data if ($response->code eq '200');
+}
 
 
 1;
