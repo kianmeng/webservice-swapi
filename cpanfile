@@ -5,6 +5,7 @@ on 'test' => sub {
     requires 'Moo';
     requires 'REST::Client';
     requires 'Role::REST::Client';
+    requires 'Data::Serializer::JSON';
 };
 
 on 'develop' => sub {
