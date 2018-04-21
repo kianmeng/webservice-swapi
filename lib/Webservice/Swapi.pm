@@ -15,14 +15,13 @@ has api_url => (
 );
 
 sub request {
-	my ($self, $object, $id, $schema_only) = @_;
+	my ($self, $object, $id) = @_;
 
 	$self->server($self->api_url);
 
 	my @paths;
 	push @paths, $object if (defined $object);
-	push @paths, $id if (defined $id && !defined $schema_only);
-	push @paths, 'schema' if (defined $schema_only);
+	push @paths, $id if (defined $id);
 
 	my $params = join('/', @paths);
 	my $response = $self->get($params);
@@ -35,7 +34,7 @@ sub schema {
 
 	$self->server($self->api_url);
 
-	return $self->request($object, undef, 1);
+	return $self->request(qq|$object/schema|);
 }
 
 
