@@ -15,17 +15,26 @@ has api_url => (
 );
 
 sub request {
-	my ($self, $object, $id) = @_;
+	my ($self, $object, $id, $schema_only) = @_;
 
 	$self->server($self->api_url);
 
 	my @params;
 	push @params, $object if (defined $object);
-	push @params, $id if (defined $id);
+	push @params, $id if (defined $id && !defined $schema_only);
+	push @params, 'schema' if (defined $schema_only);
 
 	my $response = $self->get(join('/', @params));
 
 	return $response->data if ($response->code eq '200');
+}
+
+sub schema {
+	my ($self, $object) = @_;
+
+	$self->server($self->api_url);
+
+	return $self->request($object, undef, 1);
 }
 
 

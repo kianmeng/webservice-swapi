@@ -16,4 +16,7 @@ foreach my $object (keys %$response) {
 	is($url, $expected, qq|expect URL for $object root resource match|);
 }
 
+$response = $swapi->schema('people');
+is($response->{title}, 'People', 'expect JSON scheme');
+
 done_testing;
