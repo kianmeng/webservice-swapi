@@ -57,6 +57,12 @@ sub search {
 	return $self->request($object, undef, $queries);
 }
 
+sub get_object {
+	my ($self, $object, $id) = @_;
+
+	return $self->request($object, $id);
+}
+
 
 1;
 __END__

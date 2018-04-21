@@ -25,4 +25,8 @@ is($response->{title}, 'People', 'expect JSON scheme');
 $response = $swapi->search('people', 'solo');
 is($response->{results}->[0]->{name}, 'Han Solo', 'expect people found through search');
 
+#4 get_object
+$response = $swapi->get_object('films', '1');
+is($response->{title}, 'A New Hope', 'expect film found');
+
 done_testing;
