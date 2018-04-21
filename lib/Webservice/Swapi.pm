@@ -19,12 +19,13 @@ sub request {
 
 	$self->server($self->api_url);
 
-	my @params;
-	push @params, $object if (defined $object);
-	push @params, $id if (defined $id && !defined $schema_only);
-	push @params, 'schema' if (defined $schema_only);
+	my @paths;
+	push @paths, $object if (defined $object);
+	push @paths, $id if (defined $id && !defined $schema_only);
+	push @paths, 'schema' if (defined $schema_only);
 
-	my $response = $self->get(join('/', @params));
+	my $params = join('/', @paths);
+	my $response = $self->get($params);
 
 	return $response->data if ($response->code eq '200');
 }
