@@ -11,7 +11,7 @@ our $VERSION = "0.1.0";
 
 has api_url => (
 	is => 'ro',
-	default => sub { 'http://swapi.co/api/' },
+	default => sub { 'https://swapi.co/api/' },
 );
 
 sub request {
@@ -20,7 +20,7 @@ sub request {
 	$self->server($self->api_url);
 
 	my @params;
-	push @params, $object;
+	push @params, $object if (defined $object);
 	push @params, $id if (defined $id);
 
 	my $response = $self->get(join('/', @params));
