@@ -64,7 +64,7 @@ To setup the development environment.
 
 Or using Carton.
 
-	$ carton install
+    $ carton install
 
 Run these commands to developer, test, and release.
 
