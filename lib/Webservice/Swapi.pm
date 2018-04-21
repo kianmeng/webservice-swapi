@@ -58,14 +58,22 @@ Webservice::Swapi is a Perl client helper library for the Star Wars API (swapi.c
 
 =head1 DEVELOPMENT
 
-To setup the development environment,
+To setup the development environment.
 
     $ cpanm -nq --installdeps --with-develop --with-recommends .
+
+Or using Carton.
+
+	$ carton install
 
 Run these commands to developer, test, and release.
 
     $ minil test
     $ FAKE_RELEASE=1 minil release
+
+Or using Cargon (faster).
+
+    $ carton exec -- prove -Ilib -r t
 
 =head1 LICENSE
 
