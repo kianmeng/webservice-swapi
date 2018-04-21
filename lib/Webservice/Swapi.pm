@@ -15,7 +15,7 @@ has api_url => (
 );
 
 sub request {
-	my ($self, $object, $id) = @_;
+	my ($self, $object, $id, $queries) = @_;
 
 	$self->server($self->api_url);
 
@@ -23,8 +23,20 @@ sub request {
 	push @paths, $object if (defined $object);
 	push @paths, $id if (defined $id);
 
-	my $params = join('/', @paths);
-	my $response = $self->get($params);
+	my ($url_paths, $url_queries) = ('', '');
+
+	$url_paths = join('/', @paths);
+
+	if (defined $queries) {
+		my @pairs;
+		foreach my $k (keys %$queries) {
+			push @pairs, $k . "=" . $queries->{$k};
+		}
+		$url_queries = '/?' . join('?', @pairs);
+	}
+
+	my $url = $url_paths . $url_queries;
+	my $response = $self->get($url);
 
 	return $response->data if ($response->code eq '200');
 }
@@ -35,6 +47,16 @@ sub schema {
 	$self->server($self->api_url);
 
 	return $self->request(qq|$object/schema|);
+}
+
+sub search {
+	my ($self, $object, $keyword) = @_;
+
+	my $queries = {
+		search => $keyword
+	};
+
+	return $self->request($object, undef, $queries);
 }
 
 
