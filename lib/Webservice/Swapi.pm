@@ -44,8 +44,6 @@ sub request {
 sub schema {
 	my ($self, $object) = @_;
 
-	$self->server($self->api_url);
-
 	return $self->request(qq|$object/schema|);
 }
 
