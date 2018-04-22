@@ -77,7 +77,7 @@ __END__
 
 =head1 NAME
 
-Webservice::Swapi - A Perl module to interface with the Star Wars API (swapi.co) webservice.
+Webservice::Swapi - A Perl module to interface with the L<Star Wars API|http://swapi.co> webservice.
 
 =head1 SYNOPSIS
 
@@ -99,7 +99,7 @@ Webservice::Swapi - A Perl module to interface with the Star Wars API (swapi.co)
 
 =head1 DESCRIPTION
 
-Webservice::Swapi is a Perl client helper library for the Star Wars API (swapi.co).
+Webservice::Swapi is a Perl client helper library for the L<Star Wars API|http://swapi.co>.
 
 =head1 DEVELOPMENT
 
@@ -122,7 +122,7 @@ Or using Cargon (faster).
 
 =head1 LICENSE
 
-Copyright (C) Kian-Meng, Ang.
+Copyright 2017 (C) Kian-Meng, Ang.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
