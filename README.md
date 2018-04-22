@@ -27,7 +27,7 @@ Webservice::Swapi is a Perl client helper library for the [Star Wars API](http:/
 
 # DEVELOPMENT
 
-Source repo at [https://github.com/kianmeng/webservice-swapi:https://github.com/kianmeng/webservice-swapi](https://github.com/kianmeng/webservice-swapi:https://github.com/kianmeng/webservice-swapi).
+Source repo at [https://github.com/kianmeng/webservice-swapi](https://github.com/kianmeng/webservice-swapi).
 
 To setup the development environment.
 
