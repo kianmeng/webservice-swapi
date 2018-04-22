@@ -14,7 +14,35 @@ has api_url => (
 	default => sub { 'https://swapi.co/api/' },
 );
 
-sub request {
+sub resources {
+	my ($self) = @_;
+
+	return $self->_request();
+}
+
+sub schema {
+	my ($self, $object) = @_;
+
+	return $self->_request(qq|$object/schema|);
+}
+
+sub search {
+	my ($self, $object, $keyword) = @_;
+
+	my $queries = {
+		search => $keyword
+	};
+
+	return $self->_request($object, undef, $queries);
+}
+
+sub get_object {
+	my ($self, $object, $id) = @_;
+
+	return $self->_request($object, $id);
+}
+
+sub _request {
 	my ($self, $object, $id, $queries) = @_;
 
 	$self->server($self->api_url);
@@ -39,34 +67,6 @@ sub request {
 	my $response = $self->get($url);
 
 	return $response->data if ($response->code eq '200');
-}
-
-sub resources {
-	my ($self) = @_;
-
-	return $self->request();
-}
-
-sub schema {
-	my ($self, $object) = @_;
-
-	return $self->request(qq|$object/schema|);
-}
-
-sub search {
-	my ($self, $object, $keyword) = @_;
-
-	my $queries = {
-		search => $keyword
-	};
-
-	return $self->request($object, undef, $queries);
-}
-
-sub get_object {
-	my ($self, $object, $id) = @_;
-
-	return $self->request($object, $id);
 }
 
 
