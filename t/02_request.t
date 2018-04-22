@@ -9,7 +9,7 @@ my $swapi = Webservice::Swapi->new;
 my $response;
 
 #1 request
-$response = $swapi->request();
+$response = $swapi->resources();
 foreach my $object (keys %$response) {
 	my $url = $response->{$object};
 	my $expected = $swapi->api_url . qq|$object/|;

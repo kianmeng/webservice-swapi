@@ -41,6 +41,12 @@ sub request {
 	return $response->data if ($response->code eq '200');
 }
 
+sub resources {
+	my ($self) = @_;
+
+	return $self->request();
+}
+
 sub schema {
 	my ($self, $object) = @_;
 
@@ -71,11 +77,25 @@ __END__
 
 =head1 NAME
 
-Webservice::Swapi - It's Perl module to interface with the Star Wars API (swapi.co) webservice.
+Webservice::Swapi - A Perl module to interface with the Star Wars API (swapi.co) webservice.
 
 =head1 SYNOPSIS
 
     use Webservice::Swapi;
+
+    $swapi = Webservice::Swapi->new;
+
+    # Get information of all available resources
+    my $resources = $swapi->resources();
+
+    # View the JSON schema for people resource
+    my $schema = $swapi->schema('people');
+
+    # Searching
+    my $results = $swapi->search('people', 'solo');
+
+    # Get resource item
+    my $item = $swapi->get_object('films', '1');
 
 =head1 DESCRIPTION
 

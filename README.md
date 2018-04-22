@@ -1,11 +1,25 @@
 [![Build Status](https://travis-ci.org/kianmeng/webservice-swapi.svg?branch=master)](https://travis-ci.org/kianmeng/webservice-swapi)
 # NAME
 
-Webservice::Swapi - It's Perl module to interface with the Star Wars API (swapi.co) webservice.
+Webservice::Swapi - A Perl module to interface with the Star Wars API (swapi.co) webservice.
 
 # SYNOPSIS
 
     use Webservice::Swapi;
+
+    $swapi = Webservice::Swapi->new;
+
+    # Get information of all available resources
+    my $resources = $swapi->resources();
+
+    # View the JSON schema for people resource
+    my $schema = $swapi->schema('people');
+
+    # Searching
+    my $results = $swapi->search('people', 'solo');
+
+    # Get resource item
+    my $item = $swapi->get_object('films', '1');
 
 # DESCRIPTION
 
