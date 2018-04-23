@@ -15,4 +15,11 @@ foreach my $object (keys %$response) {
 	is($url, $expected, qq|expect URL for $object root resource match|);
 }
 
+my $response_json = $swapi->resources('json');
+is_deeply($response, $response_json, 'expect JSON response');
+
+my $response_wookiee = $swapi->resources('wookiee');
+ok(exists $response_wookiee->{akwoooakanwo}, 'expect Wookiee key');
+is($response_wookiee->{akwoooakanwo}, qq|acaoaoakc://cohraakah.oaoo/raakah/akwoooakanwo/|, 'expect Wookiee value');
+
 done_testing;
