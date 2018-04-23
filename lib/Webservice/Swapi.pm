@@ -20,6 +20,7 @@ has api_url => (
 sub BUILD {
 	my ($self) = @_;
 
+	$self->set_persistent_header("User-Agent" => __PACKAGE__ . ' ' . ($Webservice::Swapi::VERSION || ''));
 	$self->server($self->api_url);
 
 	return $self;
