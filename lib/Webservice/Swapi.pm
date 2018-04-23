@@ -72,10 +72,13 @@ sub _request {
 		foreach my $k (keys %$queries) {
 			push @pairs, $k . "=" . $queries->{$k};
 		}
-		$url_queries = '/?' . join('?', @pairs);
+
+		$url_queries .= ($url_paths eq '') ? '?' : '/?';
+		$url_queries .= join('?', @pairs);
 	}
 
 	my $url = $url_paths . $url_queries;
+
 	my $response = $self->get($url);
 
 	return $response->data if ($response->code eq '200');
