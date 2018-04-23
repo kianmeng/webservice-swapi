@@ -17,6 +17,14 @@ has api_url => (
 	default => sub { 'https://swapi.co/api/' },
 );
 
+sub BUILD {
+	my ($self) = @_;
+
+	$self->server($self->api_url);
+
+	return $self;
+}
+
 sub resources {
 	my ($self, $format) = @_;
 
@@ -53,8 +61,6 @@ sub get_object {
 
 sub _request {
 	my ($self, $object, $id, $queries) = @_;
-
-	$self->server($self->api_url);
 
 	my @paths;
 	push @paths, $object if (defined $object);
