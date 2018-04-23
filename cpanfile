@@ -1,11 +1,12 @@
 requires 'perl', '5.008001';
 
 on 'test' => sub {
-    requires 'Test::More', '0.98';
+    requires 'Test::More';
     requires 'Moo';
     requires 'REST::Client';
     requires 'Role::REST::Client';
     requires 'Data::Serializer';
+    requires 'Types::Standard';
 };
 
 on 'develop' => sub {

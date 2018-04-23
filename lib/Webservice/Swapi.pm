@@ -5,11 +5,14 @@ use strict;
 use warnings;
 
 use Moo;
+use Types::Standard qw(Str);
+
 with 'Role::REST::Client';
 
 our $VERSION = "0.1.0";
 
 has api_url => (
+	isa => Str,
 	is => 'ro',
 	default => sub { 'https://swapi.co/api/' },
 );
