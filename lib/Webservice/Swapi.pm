@@ -18,31 +18,40 @@ has api_url => (
 );
 
 sub resources {
-	my ($self) = @_;
+	my ($self, $format) = @_;
 
-	return $self->_request();
+	my $queries;
+	$queries->{format} = $format if (defined $format);
+
+	return $self->_request(undef, undef, $queries);
 }
 
 sub schema {
-	my ($self, $object) = @_;
+	my ($self, $object, $format) = @_;
 
-	return $self->_request(qq|$object/schema|);
+	my $queries;
+	$queries->{format} = $format if (defined $format);
+
+	return $self->_request(qq|$object/schema|, undef, $queries);
 }
 
 sub search {
-	my ($self, $object, $keyword) = @_;
+	my ($self, $object, $keyword, $format) = @_;
 
-	my $queries = {
-		search => $keyword
-	};
+	my $queries;
+	$queries->{search} = $keyword;
+	$queries->{format} = $format if (defined $format);
 
 	return $self->_request($object, undef, $queries);
 }
 
 sub get_object {
-	my ($self, $object, $id) = @_;
+	my ($self, $object, $id, $format) = @_;
 
-	return $self->_request($object, $id);
+	my $queries;
+	$queries->{format} = $format if (defined $format);
+
+	return $self->_request($object, $id, $queries);
 }
 
 sub _request {
