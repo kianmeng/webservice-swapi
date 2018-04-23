@@ -71,7 +71,7 @@ sub _request {
 		}
 
 		$url_queries .= ($url_paths eq '') ? '?' : '/?';
-		$url_queries .= join('?', @pairs);
+		$url_queries .= join('&', @pairs);
 	}
 
 	my $url = $url_paths . $url_queries;
