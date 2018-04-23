@@ -27,12 +27,9 @@ sub resources {
 }
 
 sub schema {
-	my ($self, $object, $format) = @_;
+	my ($self, $object) = @_;
 
-	my $queries;
-	$queries->{format} = $format if (defined $format);
-
-	return $self->_request(qq|$object/schema|, undef, $queries);
+	return $self->_request(qq|$object/schema|);
 }
 
 sub search {
