@@ -10,8 +10,13 @@ before_install:
   - build-dist
   - cd $BUILD_DIR
 install:
+  - cpan-install --toolchain
   - cpan-install --deps
   - cpan-install --coverage
+script:
+    - prove -l $(test-dirs)
+after_success:
+    - coverage-report
 notifications:
   recipients:
     - kianmeng@users.noreply.github.com
