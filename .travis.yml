@@ -3,23 +3,8 @@ perl:
   - "5.26"
 sudo: false
 before_install:
-  - git clone git://github.com/travis-perl/helpers ~/travis-perl-helpers
-  - source ~/travis-perl-helpers/init
-  - build-perl
-  - perl -V
-  - build-dist
-  - cd $BUILD_DIR
+    - perlbrew install-cpanm -f
 install:
-  - cpan-install --toolchain
-  - cpan-install --deps
-  - cpan-install --coverage
+    - (cpanm --installdeps --with-develop -nq .) || cat ~/.cpanm/build.log
 script:
-    - prove -l $(test-dirs)
-after_success:
-    - coverage-report
-notifications:
-  recipients:
-    - kianmeng@users.noreply.github.com
-  email:
-    on_success: change
-    on_failure: always
+    - prove -lr t -j9
