@@ -8,4 +8,4 @@ before_install:
 install:
     - carton install
 script:
-    - carton exec -- prove -lv $(test-dirs)
+    - carton exec -- prove -Ilib -lv $(test-dirs)
