@@ -1,10 +1,10 @@
 language: perl
 perl:
   - "5.26"
-sudo: false
 before_install:
-    - perlbrew install-cpanm -f
+    - eval $(curl https://travis-perl.github.io/init) --auto
+    - local-lib
 install:
     - (cpanm --installdeps --with-develop -nq .) || cat ~/.cpanm/build.log
 script:
-    - prove -lr t -j9
+    - prove -lv $(test-dirs)
