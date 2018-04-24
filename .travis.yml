@@ -5,6 +5,7 @@ before_install:
     - eval $(curl https://travis-perl.github.io/init) --auto
     - local-lib
 install:
+    - cpanm carton
     - carton install
 script:
     - carton exec -- prove -lv $(test-dirs)
