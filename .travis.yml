@@ -7,4 +7,4 @@ install:
     - carton install
 script:
     - export PERL5LIB=$(pwd)/local/lib/perl5/
-    - carton exec -- prove -Ilib -lv $(test-dirs)
+    - carton exec -- prove -Ilib -lv t
