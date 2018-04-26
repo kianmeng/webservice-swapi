@@ -5,6 +5,7 @@ before_install:
     - cpanm Carton
 install:
     - carton install
+    - export PERL5LIB=$(pwd)/local/lib/perl5:$(pwd)/lib:$PERL5LIB
+    - export PATH=$(pwd)/local/bin:$PATH
 script:
-    - export PERL5LIB=$(pwd)/local/lib/perl5/
     - carton exec -- prove -Ilib -lv t
