@@ -25,26 +25,28 @@ Webservice::Swapi - A Perl module to interface with the [Star Wars API](http://s
 
 Webservice::Swapi is a Perl client helper library for the [Star Wars API](http://swapi.co).
 
+# Docker Setup
+
 # DEVELOPMENT
 
 Source repo at [https://github.com/kianmeng/webservice-swapi](https://github.com/kianmeng/webservice-swapi).
 
-To setup the development environment.
+If you have Docker installed, you can build your Docker container for this
+project.
 
-    $ cpanm -nq --installdeps --with-develop --with-recommends .
+    $ docker build -t webservice-swapi-0.1.0 .
+    $ docker run -it -v $(pwd):/root webservice-swapi-0.1.0 bash
 
-Or using Carton.
+To setup the development environment and run the test using Carton.
 
     $ carton install
+    $ export PERL5LIB=$(pwd)/local/lib/perl5/
+    $ carton exec -- prove -Ilib -lv t
 
-Run these commands to developer, test, and release.
+To use Minilla instead. This will update the README.md file from the source.
 
     $ minil test
     $ FAKE_RELEASE=1 minil release
-
-Or using Cargon (faster).
-
-    $ carton exec -- prove -Ilib -r t
 
 # LICENSE
 

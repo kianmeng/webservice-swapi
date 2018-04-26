@@ -21,3 +21,4 @@ nytprof.out
 *.swp
 /_eumm/
 local/
+.cpanm/
