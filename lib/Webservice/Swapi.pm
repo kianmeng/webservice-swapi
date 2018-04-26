@@ -120,9 +120,6 @@ Webservice::Swapi - A Perl module to interface with the L<Star Wars API|http://s
 
 Webservice::Swapi is a Perl client helper library for the L<Star Wars API|http://swapi.co>.
 
-=head1 Docker Setup
-
-
 =head1 DEVELOPMENT
 
 Source repo at L<https://github.com/kianmeng/webservice-swapi|https://github.com/kianmeng/webservice-swapi>.
