@@ -4,6 +4,7 @@ on 'test' => sub {
     requires 'Test::More';
     requires 'Minilla';
     requires 'Moo';
+    requires 'JSON';
     requires 'REST::Client';
     requires 'Role::REST::Client';
     requires 'Data::Serializer';

@@ -2,10 +2,9 @@ language: perl
 perl:
   - "5.26"
 before_install:
-    - eval $(curl https://travis-perl.github.io/init) --auto
-    - local-lib
     - cpanm Carton
 install:
     - carton install
 script:
+    - export PERL5LIB=$(pwd)/local/lib/perl5/
     - carton exec -- prove -Ilib -lv $(test-dirs)
