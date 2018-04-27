@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/kianmeng/webservice-swapi.svg?branch=master)](https://travis-ci.org/kianmeng/webservice-swapi)
 # NAME
 
-Webservice::Swapi - A Perl module to interface with the [Star Wars API](http://swapi.co) webservice.
+Webservice::Swapi - A Perl module to interface with the Star Wars API
+(swapi.co) webservice.
 
 # SYNOPSIS
 
@@ -23,7 +24,7 @@ Webservice::Swapi - A Perl module to interface with the [Star Wars API](http://s
 
 # DESCRIPTION
 
-Webservice::Swapi is a Perl client helper library for the [Star Wars API](http://swapi.co).
+Webservice::Swapi is a Perl client helper library for the Star Wars API (swapi.co).
 
 # DEVELOPMENT
 
