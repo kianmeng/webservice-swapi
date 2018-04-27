@@ -2,6 +2,10 @@ Revision history for Perl extension Webservice-Swapi
 
 {{$NEXT}}
 
+0.1.1 2018-04-27T16:22:59Z
+
+    - Minor documentation cleanup
+
 0.1.0 2018-04-26T16:56:09Z
 
     - initial release
