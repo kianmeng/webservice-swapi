@@ -139,8 +139,11 @@ To setup the development environment and run the test using Carton.
 
 To use Minilla instead. This will update the README.md file from the source.
 
+    $ cpanm Minilla
+    $ minil build
     $ minil test
-    $ FAKE_RELEASE=1 minil release
+    $ FAKE_RELEASE=1 minil release # testing
+    $ minil release # actual
 
 =head1 LICENSE
 
