@@ -1,0 +1,9 @@
+severity = 1
+verbose = 11
+theme = core + pbp + bugs + certrec + certrule + maintenance + cosmetic + complexity + security + tests
+
+[TestingAndDebugging::RequirePackageStricture]
+priority = 1
+
+[TestingAndDebugging::RequirePackageWarnings]
+priority = 1

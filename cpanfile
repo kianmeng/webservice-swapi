@@ -9,6 +9,7 @@ requires 'Types::Standard';
 
 on 'test' => sub {
     requires 'Test::More';
+    requires 'Test::Perl::Critic';
     requires 'Minilla';
 };
 
