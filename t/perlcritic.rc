@@ -11,3 +11,4 @@ priority = 1
 [-ControlStructures::ProhibitPostfixControls]
 [-Documentation::RequirePodSections]
 [-Documentation::PodSpelling]
+[-CodeLayout::RequireTidyCode]

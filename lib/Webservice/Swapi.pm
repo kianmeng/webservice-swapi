@@ -137,6 +137,10 @@ To setup the development environment and run the test using Carton.
 
     $ carton install
     $ export PERL5LIB=$(pwd)/local/lib/perl5/
+
+To enable Perl::Critic test cases, enable the flag.
+
+    $ export TEST_CRITIC=1
     $ carton exec -- prove -Ilib -lv t
 
 To use Minilla instead. This will update the README.md file from the source.
