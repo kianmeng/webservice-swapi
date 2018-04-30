@@ -9,85 +9,87 @@ use Types::Standard qw(Str);
 
 with 'Role::REST::Client';
 
-our $VERSION = "0.1.1";
+our $VERSION = '0.1.1';
 
 has api_url => (
-	isa => Str,
-	is => 'ro',
-	default => sub { 'https://swapi.co/api/' },
+    isa     => Str,
+    is      => 'ro',
+    default => sub { 'https://swapi.co/api/' },
 );
 
 sub BUILD {
-	my ($self) = @_;
+    my ($self) = @_;
 
-	$self->set_persistent_header("User-Agent" => __PACKAGE__ . ' ' . ($Webservice::Swapi::VERSION || ''));
-	$self->server($self->api_url);
+    $self->set_persistent_header('User-Agent' => __PACKAGE__ . q| |
+          . ($Webservice::Swapi::VERSION || q||));
+    $self->server($self->api_url);
 
-	return $self;
+    return $self;
 }
 
 sub resources {
-	my ($self, $format) = @_;
+    my ($self, $format) = @_;
 
-	my $queries;
-	$queries->{format} = $format if (defined $format);
+    my $queries;
+    $queries->{format} = $format if (defined $format);
 
-	return $self->_request(undef, undef, $queries);
+    return $self->_request(undef, undef, $queries);
 }
 
 sub schema {
-	my ($self, $object) = @_;
+    my ($self, $object) = @_;
 
-	return $self->_request(qq|$object/schema|);
+    return $self->_request(qq|$object/schema|);
 }
 
 sub search {
-	my ($self, $object, $keyword, $format) = @_;
+    my ($self, $object, $keyword, $format) = @_;
 
-	my $queries;
-	$queries->{search} = $keyword;
-	$queries->{format} = $format if (defined $format);
+    my $queries;
+    $queries->{search} = $keyword;
+    $queries->{format} = $format if (defined $format);
 
-	return $self->_request($object, undef, $queries);
+    return $self->_request($object, undef, $queries);
 }
 
 sub get_object {
-	my ($self, $object, $id, $format) = @_;
+    my ($self, $object, $id, $format) = @_;
 
-	my $queries;
-	$queries->{format} = $format if (defined $format);
+    my $queries;
+    $queries->{format} = $format if (defined $format);
 
-	return $self->_request($object, $id, $queries);
+    return $self->_request($object, $id, $queries);
 }
 
 sub _request {
-	my ($self, $object, $id, $queries) = @_;
+    my ($self, $object, $id, $queries) = @_;
 
-	my @paths;
-	push @paths, $object if (defined $object);
-	push @paths, $id if (defined $id);
+    my @paths;
+    push @paths, $object if (defined $object);
+    push @paths, $id     if (defined $id);
 
-	my ($url_paths, $url_queries) = ('', '');
+    my ($url_paths, $url_queries) = (q||, q||);
 
-	$url_paths = join('/', @paths);
+    $url_paths = join q|/|, @paths;
 
-	if (defined $queries) {
-		my @pairs;
-		foreach my $k (keys %$queries) {
-			push @pairs, $k . "=" . $queries->{$k};
-		}
+    if (defined $queries) {
+        my @pairs;
+        foreach my $k (keys %{$queries}) {
+            push @pairs, $k . q|=| . $queries->{$k};
+        }
 
-		$url_queries .= ($url_paths eq '') ? '?' : '/?';
-		$url_queries .= join('&', @pairs);
-	}
+        $url_queries .= ($url_paths eq q||) ? q|?| : q|/?|;
+        $url_queries .= join q|&|, @pairs;
+    }
 
-	my $url = $url_paths . $url_queries;
+    my $url = $url_paths . $url_queries;
 
-	my $response = $self->get($url);
+    my $response = $self->get($url);
 
-	return $response->data if ($response->code eq '200');
+    return $response->data if ($response->code eq '200');
+
+    return;
 }
-
 
 1;
 __END__
