@@ -691,15 +691,6 @@ DISTRIBUTIONS
       IO::String 1.08
     requirements:
       ExtUtils::MakeMaker 0
-  IO-Tty-1.12
-    pathname: T/TO/TODDR/IO-Tty-1.12.tar.gz
-    provides:
-      IO::Pty 1.12
-      IO::Tty 1.12
-      IO::Tty::Constant undef
-    requirements:
-      ExtUtils::MakeMaker 0
-      Test::More 0
   IPC-Run-0.99
     pathname: T/TO/TODDR/IPC-Run-0.99.tar.gz
     provides:
@@ -712,7 +703,6 @@ DISTRIBUTIONS
       IPC::Run::Win32Pump 0.99
     requirements:
       ExtUtils::MakeMaker 0
-      IO::Pty 1.08
       Test::More 0.47
   JSON-2.97001
     pathname: I/IS/ISHIGAKI/JSON-2.97001.tar.gz

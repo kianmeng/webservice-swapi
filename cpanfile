@@ -8,6 +8,8 @@ requires 'Data::Serializer';
 requires 'Types::Standard';
 
 on 'test' => sub {
+    requires 'Devel::Cover';
+    requires 'Devel::Cover::Report::Codecov';
     requires 'Test::More';
     requires 'Test::Perl::Critic';
     requires 'Perl::Critic::Policy::TestingAndDebugging::RequirePackageStricture';

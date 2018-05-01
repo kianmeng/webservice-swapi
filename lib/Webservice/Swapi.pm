@@ -141,8 +141,8 @@ Source repo at L<https://github.com/kianmeng/webservice-swapi|https://github.com
 If you have Docker installed, you can build your Docker container for this
 project.
 
-    $ docker build -t webservice-swapi-0.1.0 .
-    $ docker run -it -v $(pwd):/root webservice-swapi-0.1.0 bash
+    $ docker build -t webservice-swapi .
+    $ docker run -it -v $(pwd):/root webservice-swapi bash
 
 To setup the development environment and run the test using Carton.
 
