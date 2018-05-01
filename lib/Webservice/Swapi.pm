@@ -13,7 +13,7 @@ our $VERSION = '0.1.1';
 
 has api_url => (
     isa     => Str,
-    is      => 'ro',
+    is      => 'rw',
     default => sub { 'https://swapi.co/api/' },
 );
 
@@ -30,9 +30,9 @@ sub BUILD {
 sub ping {
     my ($self) = @_;
 
-    my $response = $self->get(q||);
+    my $response = $self->resources();
 
-    return ($response->code eq '200') ? 1 : 0;
+    return (!exists $response->{films}) ? 0 : 1;
 }
 
 sub resources {
@@ -71,6 +71,9 @@ sub get_object {
 
 sub _request {
     my ($self, $object, $id, $queries) = @_;
+
+    # In case the api_url was updated.
+    $self->server($self->api_url);
 
     my @paths;
     push @paths, $object if (defined $object);
