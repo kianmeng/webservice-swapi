@@ -27,6 +27,14 @@ sub BUILD {
     return $self;
 }
 
+sub ping {
+    my ($self) = @_;
+
+    my $response = $self->get(q||);
+
+    return ($response->code eq '200') ? 1 : 0;
+}
+
 sub resources {
     my ($self, $format) = @_;
 
