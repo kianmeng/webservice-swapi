@@ -1,13 +1,20 @@
 language: perl
+
 perl:
   - "5.26"
+
 before_install:
   - cpanm Carton
+
 install:
   - carton install
   - export PERL5LIB=$(pwd)/local/lib/perl5:$(pwd)/lib:$PERL5LIB
   - export PATH=$HOME/perl5/bin:$(pwd)/local/bin:$PATH
+
 script:
-  - carton exec -- cover -test -ignore_re '^t/|^local/' -make 'prove -Ilib -lv t'
+  - perl Build.PL
+  - ./Build build
+  - cover -test -ignore_re '^t/|^local/'
+
 after_success:
-    - cover -report codecov
+  - cover -report codecov

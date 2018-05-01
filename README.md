@@ -40,6 +40,7 @@ To setup the development environment and run the test using Carton.
 
     $ carton install
     $ export PERL5LIB=$(pwd)/local/lib/perl5/
+    $ export PATH=$HOME/perl5/bin:$(pwd)/local/bin:$PATH
 
 To enable Perl::Critic test cases, enable the flag.
 
