@@ -1,15 +1,10 @@
 language: perl
 
 perl:
-  - "5.26"
-
-before_install:
-  - cpanm Carton
+  - "5.14"
 
 install:
-  - carton install
-  - export PERL5LIB=$(pwd)/local/lib/perl5:$(pwd)/lib:$PERL5LIB
-  - export PATH=$HOME/perl5/bin:$(pwd)/local/bin:$PATH
+  - cpanm --quiet --installdeps --notest .
 
 script:
   - perl Build.PL
