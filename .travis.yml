@@ -3,13 +3,29 @@ language: perl
 perl:
   - "5.14"
 
+env:
+  - COVERAGE=codecov
+  - AUTHOR_TESTING=0
+
+sudo: false
+
+before_install:
+  - git clone git://github.com/travis-perl/helpers ~/travis-perl-helpers
+  - source ~/travis-perl-helpers/init
+  - build-perl
+  - perl -V
+  - build-dist
+  - cd $BUILD_DIR
+
 install:
-  - cpanm --quiet --installdeps --notest .
+  - cpan-install --deps
+  - cpan-install --coverage
+
+before_script:
+  - coverage-setup
 
 script:
-  - perl Build.PL
-  - ./Build build
-  - cover -test -ignore_re '^t/|^local/'
+  - prove -lv $(test-dirs)
 
 after_success:
-  - cover -report codecov
+  - coverage-report
