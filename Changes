@@ -2,6 +2,12 @@ Revision history for Perl extension Webservice-Swapi
 
 {{$NEXT}}
 
+0.1.3 2018-05-02T18:05:05Z
+
+    - Switch license to Artistic 2
+    - Use utf8
+    - More cleanups on documentation
+
 0.1.2 2018-05-01T04:00:38Z
 
     - Add ping method to check API server availability
