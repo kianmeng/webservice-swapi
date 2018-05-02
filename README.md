@@ -53,7 +53,7 @@ To enable Perl::Critic test cases, enable the flag.
 
     $ TEST_CRITIC=1 carton exec -- prove -Ilib -lv t
 
-## Minlla
+## Minilla
 
 To use Minilla instead. This will update the README.md file from the source.
 
@@ -63,7 +63,7 @@ To use Minilla instead. This will update the README.md file from the source.
     $ FAKE_RELEASE=1 minil release # testing
     $ minil release # actual
 
-# LICENSE
+# COPYRIGHT AND LICENSE
 
 This software is Copyright (c) 2017 by Kian Meng, Ang.
 
