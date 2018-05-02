@@ -3,10 +3,6 @@ language: perl
 perl:
   - "5.26"
 
-cache:
-  directories:
-    - ~/perl5
-
 env:
   - COVERAGE="codecov coveralls"
 
@@ -14,7 +10,6 @@ sudo: false
 
 before_install:
   - eval $(curl https://travis-perl.github.io/init) --auto --always-upgrade-modules
-  - local-lib
 
 install:
   - cpan-install --deps
