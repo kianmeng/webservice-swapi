@@ -174,10 +174,11 @@ To use Minilla instead. This will update the README.md file from the source.
 
 =head1 LICENSE
 
-Copyright (C) 2017 Kian-Meng, Ang.
+This software is Copyright (c) 2017 by Kian Meng, Ang.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This is free software, licensed under:
+
+  The Artistic License 2.0 (GPL Compatible)
 
 =head1 AUTHOR
 

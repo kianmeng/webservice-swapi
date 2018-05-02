@@ -13,11 +13,11 @@ on 'test' => sub {
     requires 'Devel::Cover::Report::Codecov';
     requires 'Test::More';
     requires 'Test::Perl::Critic';
-    requires 'Minilla';
 };
 
 on 'develop' => sub {
-    requires 'Minilla';
     requires 'App::CISetup';
+    requires 'App::Software::License';
+    requires 'Minilla';
     recommends 'Devel::NYTProf';
 };

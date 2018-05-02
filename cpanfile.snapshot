@@ -43,6 +43,23 @@ DISTRIBUTIONS
       perl 5.014000
       strict 0
       warnings 0
+  App-Software-License-0.11
+    pathname: E/ET/ETHER/App-Software-License-0.11.tar.gz
+    provides:
+      App::Software::License 0.11
+    requirements:
+      Config::Any 0
+      ExtUtils::MakeMaker 0
+      File::HomeDir 0
+      File::Spec::Functions 0
+      Module::Runtime 0
+      Moo 1.001000
+      MooX::Options 0
+      Software::License 0
+      namespace::autoclean 0.16
+      perl 5.006
+      strict 0
+      warnings 0
   App-cpanminus-1.7044
     pathname: M/MI/MIYAGAWA/App-cpanminus-1.7044.tar.gz
     provides:
@@ -278,6 +295,19 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       Test::More 0
+  Config-Any-0.32
+    pathname: H/HA/HAARG/Config-Any-0.32.tar.gz
+    provides:
+      Config::Any 0.32
+      Config::Any::Base undef
+      Config::Any::General undef
+      Config::Any::INI undef
+      Config::Any::JSON undef
+      Config::Any::Perl undef
+      Config::Any::XML undef
+      Config::Any::YAML undef
+    requirements:
+      Module::Pluggable::Object 3.6
   Config-Identity-0.0019
     pathname: D/DA/DAGOLDEN/Config-Identity-0.0019.tar.gz
     provides:
@@ -680,6 +710,18 @@ DISTRIBUTIONS
       perl 5.008
       strict 0
       warnings 0
+  File-Find-Rule-0.34
+    pathname: R/RC/RCLAMP/File-Find-Rule-0.34.tar.gz
+    provides:
+      File::Find::Rule 0.34
+      File::Find::Rule::Test::ATeam undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      File::Find 0
+      File::Spec 0
+      Number::Compare 0
+      Test::More 0
+      Text::Glob 0.07
   File-HomeDir-1.002
     pathname: R/RE/REHSACK/File-HomeDir-1.002.tar.gz
     provides:
@@ -1247,6 +1289,16 @@ DISTRIBUTIONS
       perl 5.008
       strict 0
       warnings 0
+  MIME-Charset-1.012.2
+    pathname: N/NE/NEZUMI/MIME-Charset-1.012.2.tar.gz
+    provides:
+      MIME::Charset v1.12.2
+    requirements:
+      CPAN 0
+      Encode 1.98
+      ExtUtils::MakeMaker 6.42
+      Test::More 0
+      perl 5.005
   MRO-Compat-0.13
     pathname: H/HA/HAARG/MRO-Compat-0.13.tar.gz
     provides:
@@ -1586,6 +1638,34 @@ DISTRIBUTIONS
       Module::Runtime 0
       Moo 1.003000
       Role::Tiny 0
+  MooX-Locale-Passthrough-0.001
+    pathname: R/RE/REHSACK/MooX-Locale-Passthrough-0.001.tar.gz
+    provides:
+      MooX::Locale::Passthrough 0.001
+    requirements:
+      ExtUtils::MakeMaker 0
+      Moo 1.003
+      perl 5.008001
+  MooX-Options-4.103
+    pathname: R/RE/REHSACK/MooX-Options-4.103.tar.gz
+    provides:
+      MooX::Options 4.103
+      MooX::Options::Descriptive 4.103
+      MooX::Options::Descriptive::Usage 4.103
+      MooX::Options::Role 4.103
+    requirements:
+      ExtUtils::MakeMaker 0
+      Getopt::Long 2.43
+      Getopt::Long::Descriptive 0.099
+      MRO::Compat 0
+      Module::Runtime 0
+      Moo 1.003
+      MooX::Locale::Passthrough 0
+      Path::Class 0.32
+      Pod::Usage 0
+      Text::LineFold 0
+      perl 5.008001
+      strictures 2
   Moose-2.2010
     pathname: E/ET/ETHER/Moose-2.2010.tar.gz
     provides:
@@ -2451,6 +2531,31 @@ DISTRIBUTIONS
     requirements:
       Test::More 0
       Text::Balanced 1.95
+  Path-Class-0.37
+    pathname: K/KW/KWILLIAMS/Path-Class-0.37.tar.gz
+    provides:
+      Path::Class 0.37
+      Path::Class::Dir 0.37
+      Path::Class::Entity 0.37
+      Path::Class::File 0.37
+    requirements:
+      Carp 0
+      Cwd 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.30
+      File::Copy 0
+      File::Path 0
+      File::Spec 3.26
+      File::Temp 0
+      File::stat 0
+      IO::Dir 0
+      IO::File 0
+      Module::Build 0.3601
+      Perl::OSType 0
+      Scalar::Util 0
+      overload 0
+      parent 0
+      strict 0
   Path-Iterator-Rule-1.012
     pathname: D/DA/DAGOLDEN/Path-Iterator-Rule-1.012.tar.gz
     provides:
@@ -3437,6 +3542,18 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       Test::More 0
+  Unicode-LineBreak-2018.003
+    pathname: N/NE/NEZUMI/Unicode-LineBreak-2018.003.tar.gz
+    provides:
+      Text::LineFold 2016.00702
+      Unicode::GCString 2013.10
+      Unicode::LineBreak 2018.003
+    requirements:
+      Encode 1.98
+      ExtUtils::MakeMaker 6.26
+      MIME::Charset v1.6.2
+      Test::More 0.45
+      perl 5.008
   Variable-Magic-0.62
     pathname: V/VP/VPIT/Variable-Magic-0.62.tar.gz
     provides:

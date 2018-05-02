@@ -1,3 +1,4 @@
 name = "Webservice-Swapi"
 badges = ["travis", "coveralls", "codecov", "metacpan"]
 module_maker="ModuleBuildTiny"
+license="artistic_2"
