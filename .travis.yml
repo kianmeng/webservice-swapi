@@ -8,7 +8,7 @@ cache:
     - ~/perl5
 
 env:
-  - COVERAGE=1
+  - COVERAGE="codecov coveralls"
 
 sudo: false
 
