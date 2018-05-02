@@ -280,6 +280,20 @@ DISTRIBUTIONS
       Sub::Retry 0.06
       URI 1.60
       perl 5.008001
+  Devel-Cover-Report-Coveralls-0.11
+    pathname: M/MI/MIKIHOSHI/Devel-Cover-Report-Coveralls-0.11.tar.gz
+    provides:
+      Devel::Cover::Report::Coveralls 0.11
+    requirements:
+      Devel::Cover 1.02
+      HTTP::Tiny 0.043
+      IO::Socket::SSL 1.42
+      JSON::PP 0
+      Module::Build 0.38
+      Mozilla::CA 0
+      Net::SSLeay 1.49
+      YAML 0
+      perl 5.008005
   Devel-GlobalDestruction-0.14
     pathname: H/HA/HAARG/Devel-GlobalDestruction-0.14.tar.gz
     provides:
@@ -691,6 +705,15 @@ DISTRIBUTIONS
       IO::String 1.08
     requirements:
       ExtUtils::MakeMaker 0
+  IO-Tty-1.12
+    pathname: T/TO/TODDR/IO-Tty-1.12.tar.gz
+    provides:
+      IO::Pty 1.12
+      IO::Tty 1.12
+      IO::Tty::Constant undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
   IPC-Run-0.99
     pathname: T/TO/TODDR/IPC-Run-0.99.tar.gz
     provides:
@@ -703,6 +726,7 @@ DISTRIBUTIONS
       IPC::Run::Win32Pump 0.99
     requirements:
       ExtUtils::MakeMaker 0
+      IO::Pty 1.08
       Test::More 0.47
   JSON-2.97001
     pathname: I/IS/ISHIGAKI/JSON-2.97001.tar.gz
@@ -2073,6 +2097,34 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Fcntl 0
       URI 1.10
+      perl 5.008001
+  YAML-1.24
+    pathname: T/TI/TINITA/YAML-1.24.tar.gz
+    provides:
+      YAML 1.24
+      YAML::Any 1.24
+      YAML::Dumper undef
+      YAML::Dumper::Base undef
+      YAML::Error undef
+      YAML::Loader undef
+      YAML::Loader::Base undef
+      YAML::Marshall undef
+      YAML::Mo undef
+      YAML::Node undef
+      YAML::Tag undef
+      YAML::Type::blessed undef
+      YAML::Type::code undef
+      YAML::Type::glob undef
+      YAML::Type::ref undef
+      YAML::Type::regexp undef
+      YAML::Type::undef undef
+      YAML::Types undef
+      YAML::Warning undef
+      yaml_mapping undef
+      yaml_scalar undef
+      yaml_sequence undef
+    requirements:
+      ExtUtils::MakeMaker 0
       perl 5.008001
   bareword-filehandles-0.005
     pathname: I/IL/ILMARI/bareword-filehandles-0.005.tar.gz

@@ -9,7 +9,7 @@ requires 'Types::Standard';
 
 on 'test' => sub {
     requires 'Devel::Cover';
-    requires 'Devel::Cover::Report::Codealls';
+    requires 'Devel::Cover::Report::Coveralls';
     requires 'Devel::Cover::Report::Codecov';
     requires 'Test::More';
     requires 'Test::Perl::Critic';

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/kianmeng/webservice-swapi.svg?branch=master)](https://travis-ci.org/kianmeng/webservice-swapi) [![Coverage Status](http://codecov.io/github/kianmeng/webservice-swapi/coverage.svg?branch=master)](https://codecov.io/github/kianmeng/webservice-swapi?branch=master) [![MetaCPAN Release](https://badge.fury.io/pl/Webservice-Swapi.svg)](https://metacpan.org/release/Webservice-Swapi)
+[![Build Status](https://travis-ci.org/kianmeng/webservice-swapi.svg?branch=master)](https://travis-ci.org/kianmeng/webservice-swapi) [![Coverage Status](https://img.shields.io/coveralls/kianmeng/webservice-swapi/master.svg?style=flat)](https://coveralls.io/r/kianmeng/webservice-swapi?branch=master) [![Coverage Status](http://codecov.io/github/kianmeng/webservice-swapi/coverage.svg?branch=master)](https://codecov.io/github/kianmeng/webservice-swapi?branch=master) [![MetaCPAN Release](https://badge.fury.io/pl/Webservice-Swapi.svg)](https://metacpan.org/release/Webservice-Swapi)
 # NAME
 
 Webservice::Swapi - A Perl module to interface with the Star Wars API
