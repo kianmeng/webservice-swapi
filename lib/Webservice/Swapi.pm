@@ -10,7 +10,7 @@ use Types::Standard qw(Str);
 
 with 'Role::REST::Client';
 
-our $VERSION = '0.1.2';
+our $VERSION = '0.1.3';
 
 has api_url => (
     isa     => Str,
