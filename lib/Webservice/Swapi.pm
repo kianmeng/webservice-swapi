@@ -119,6 +119,9 @@ Webservice::Swapi - A Perl module to interface with the Star Wars API
 
     $swapi = Webservice::Swapi->new;
 
+    # Check if API server is up
+    my $resources = $swapi->ping();
+
     # Get information of all available resources
     my $resources = $swapi->resources();
 
@@ -139,11 +142,15 @@ Webservice::Swapi is a Perl client helper library for the Star Wars API (swapi.c
 
 Source repo at L<https://github.com/kianmeng/webservice-swapi|https://github.com/kianmeng/webservice-swapi>.
 
+=head2 Docker
+
 If you have Docker installed, you can build your Docker container for this
 project.
 
     $ docker build -t webservice-swapi .
     $ docker run -it -v $(pwd):/root webservice-swapi bash
+
+=head2 Carton
 
 To setup the development environment and run the test using Carton.
 
@@ -155,6 +162,8 @@ To enable Perl::Critic test cases, enable the flag.
 
     $ TEST_CRITIC=1 carton exec -- prove -Ilib -lv t
 
+=head2 Minlla
+
 To use Minilla instead. This will update the README.md file from the source.
 
     $ cpanm Minilla
@@ -165,7 +174,7 @@ To use Minilla instead. This will update the README.md file from the source.
 
 =head1 LICENSE
 
-Copyright 2017 (C) Kian-Meng, Ang.
+Copyright (C) 2017 Kian-Meng, Ang.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
