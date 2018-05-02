@@ -18,5 +18,6 @@ on 'test' => sub {
 
 on 'develop' => sub {
     requires 'Minilla';
+    requires 'App::CISetup';
     recommends 'Devel::NYTProf';
 };
