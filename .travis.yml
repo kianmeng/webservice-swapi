@@ -4,7 +4,7 @@ perl:
   - "5.26"
 
 env:
-  - COVERAGE=codecov
+  - COVERAGE=1
 
 sudo: false
 
