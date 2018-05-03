@@ -160,7 +160,7 @@ To setup the development environment and run the test using Carton.
 
 To enable Perl::Critic test cases, enable the flag.
 
-    $ TEST_CRITIC=1 carton exec -- prove -Ilib -lv t
+    $ AUTHOR_TESTING=1 carton exec -- prove -Ilib -lv t
 
 =head2 Minilla
 

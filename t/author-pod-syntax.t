@@ -6,8 +6,8 @@ use Test::More;
 use Test::Pod::Coverage;
 use Pod::Coverage::TrustPod;
 
-if (!$ENV{TEST_CRITIC}) {
-	my $msg = 'export TEST_CRITIC=1 to enable pod coverage.';
+if (!$ENV{AUTHOR_TESTING}) {
+	my $msg = 'export AUTHOR_TESTING=1 to enable pod coverage testing.';
 	plan(skip_all => $msg);
 }
 
