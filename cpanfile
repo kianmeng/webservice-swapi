@@ -13,6 +13,8 @@ on 'test' => sub {
     requires 'Devel::Cover::Report::Codecov';
     requires 'Test::More';
     requires 'Test::Perl::Critic';
+    requires 'Test::Pod::Coverage';
+    requires 'Pod::Coverage::TrustPod';
 };
 
 on 'develop' => sub {

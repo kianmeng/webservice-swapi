@@ -172,6 +172,20 @@ To use Minilla instead. This will update the README.md file from the source.
     $ FAKE_RELEASE=1 minil release # testing
     $ minil release # actual
 
+=head1 METHODS
+
+=head2 BUILD
+
+=head2 get_object
+
+=head2 ping
+
+=head2 resources
+
+=head2 schema
+
+=head2 search
+
 =head1 COPYRIGHT AND LICENSE
 
 This software is Copyright (c) 2017 by Kian Meng, Ang.
