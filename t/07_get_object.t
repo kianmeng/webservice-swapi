@@ -15,7 +15,7 @@ my $response_json = $swapi->get_object('films', '1', 'json');
 is_deeply($response, $response_json, 'expect JSON response');
 
 SKIP: {
-	skip "wookie format returns illegal backslash";
+	skip "wookiee format returns illegal backslash";
 
 	my $response_wookiee = $swapi->get_object('films', '1', 'wookiee');
 	is($response_wookiee->{aoahaoanwo}, "A Nwooh Hooakwo", 'expect Wookiee response');
