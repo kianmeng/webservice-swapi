@@ -11,4 +11,7 @@ if (!$ENV{AUTHOR_TESTING}) {
 	plan(skip_all => $msg);
 }
 
-all_pod_coverage_ok({coverage_class => 'Pod::Coverage::TrustPod'});
+all_pod_coverage_ok({
+    coverage_class => 'Pod::Coverage::TrustPod',
+    trustme => ['BUILD']
+});
