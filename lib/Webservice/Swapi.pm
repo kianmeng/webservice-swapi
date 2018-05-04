@@ -174,19 +174,27 @@ To use Minilla instead. This will update the README.md file from the source.
 
 =head1 METHODS
 
-=head2 BUILD
+=head2 new([%$args])
 
-Constructor of the object.
+Construct a new Webservice::Swapi instance. Optionally takes a hash or hash reference.
+
+=over 4
+
+=item api_url
+
+The URL of the API resource.
+
+=back
 
     # Instantiate the class.
     my $swapi = Webservice::Swapi->new;
 
     # Set the API URL.
-    my $swapi = Webservice::Swapi->new(api_url => 'http://example.com/api/');
+    my $swapi = Webservice::Swapi->new({api_url => 'http://example.com/api/'});
 
-=head2 get_object
+=head2 get_object($object, [$format])
 
-Get full details of a object or resource.
+Get full details of a object or resource. Optionally takes a returned format.
 
     # Get the details of different available object using id.
     my $object = $swapi->get_object('films', '1');
@@ -195,33 +203,33 @@ Get full details of a object or resource.
     my $object_json = $swapi->get_object('films', '1', 'json');
     my $object_wookie = $swapi->get_object('films', '1', 'wookiee');
 
-=head2 ping
+=head2 ping()
 
-Check if the API service is responding to request.
+Check if the API service or server is responding to a request.
 
     my $server_status = $swapi->ping();
 
-=head2 resources
+=head2 resources([$format])
 
-List down all the available objects.
+List down all the available objects. Optionally takes a returned format.
 
-    # Get all available resources (objects).
+    # Get all available resources or objects.
     my $resources = $swapi->resources();
 
     # Similarly but in different format.
     my $resources_json = $swapi->resources('json');
     my $resources_wookie = $swapi->resources('wookie');
 
-=head2 schema
+=head2 schema($object)
 
-Show the data structure.
+Show the data structure of a resource or object.
 
     # Get the schema / structure of a resource or object.
     my $schema = $swapi->schema('people');
 
-=head2 search
+=head2 search($object, $keyword, [$format])
 
-Searching by keywords.
+Searching by keywords. Takes both an object and keywords. Optionally takes a returned format.
 
     # Search a resource or object by keywords.
     my $results = $swapi->search('people', 'solo');
