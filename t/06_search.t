@@ -4,9 +4,9 @@ use utf8;
 
 use Test::More;
 
-use Webservice::Swapi;
+use WebService::Swapi;
 
-my $swapi = Webservice::Swapi->new;
+my $swapi = WebService::Swapi->new;
 
 my $response = $swapi->search('people', 'solo');
 is($response->{results}->[0]->{name}, 'Han Solo', 'expect people found through search');

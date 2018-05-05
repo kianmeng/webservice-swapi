@@ -1,14 +1,14 @@
-[![Build Status](https://travis-ci.org/kianmeng/webservice-swapi.svg?branch=master)](https://travis-ci.org/kianmeng/webservice-swapi) [![Coverage Status](https://img.shields.io/coveralls/kianmeng/webservice-swapi/master.svg?style=flat)](https://coveralls.io/r/kianmeng/webservice-swapi?branch=master) [![Coverage Status](http://codecov.io/github/kianmeng/webservice-swapi/coverage.svg?branch=master)](https://codecov.io/github/kianmeng/webservice-swapi?branch=master) [![MetaCPAN Release](https://badge.fury.io/pl/Webservice-Swapi.svg)](https://metacpan.org/release/Webservice-Swapi)
+[![Build Status](https://travis-ci.org/kianmeng/webservice-swapi.svg?branch=master)](https://travis-ci.org/kianmeng/webservice-swapi) [![Coverage Status](https://img.shields.io/coveralls/kianmeng/webservice-swapi/master.svg?style=flat)](https://coveralls.io/r/kianmeng/webservice-swapi?branch=master) [![Coverage Status](http://codecov.io/github/kianmeng/webservice-swapi/coverage.svg?branch=master)](https://codecov.io/github/kianmeng/webservice-swapi?branch=master) [![MetaCPAN Release](https://badge.fury.io/pl/WebService-Swapi.svg)](https://metacpan.org/release/WebService-Swapi)
 # NAME
 
-Webservice::Swapi - A Perl module to interface with the Star Wars API
+WebService::Swapi - A Perl module to interface with the Star Wars API
 (swapi.co) webservice.
 
 # SYNOPSIS
 
-    use Webservice::Swapi;
+    use WebService::Swapi;
 
-    $swapi = Webservice::Swapi->new;
+    $swapi = WebService::Swapi->new;
 
     # Check if API server is up
     my $resources = $swapi->ping();
@@ -27,7 +27,7 @@ Webservice::Swapi - A Perl module to interface with the Star Wars API
 
 # DESCRIPTION
 
-Webservice::Swapi is a Perl client helper library for the Star Wars API (swapi.co).
+WebService::Swapi is a Perl client helper library for the Star Wars API (swapi.co).
 
 # DEVELOPMENT
 
@@ -67,17 +67,17 @@ To use Minilla instead. This will update the README.md file from the source.
 
 ## new(\[%$args\])
 
-Construct a new Webservice::Swapi instance. Optionally takes a hash or hash reference.
+Construct a new WebService::Swapi instance. Optionally takes a hash or hash reference.
 
     # Instantiate the class.
-    my $swapi = Webservice::Swapi->new;
+    my $swapi = WebService::Swapi->new;
 
 ### api\_url
 
 The URL of the API resource.
 
     # Instantiate the class by setting the URL of the API endpoints.
-    my $swapi = Webservice::Swapi->new({api_url => 'http://example.com/api/'});
+    my $swapi = WebService::Swapi->new({api_url => 'http://example.com/api/'});
 
 ## get\_object($object, \[$format\])
 

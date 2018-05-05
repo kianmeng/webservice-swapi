@@ -4,9 +4,9 @@ use utf8;
 
 use Test::More;
 
-use Webservice::Swapi;
+use WebService::Swapi;
 
-my $swapi = Webservice::Swapi->new;
+my $swapi = WebService::Swapi->new;
 
 my $response = $swapi->resources();
 foreach my $object (keys %$response) {

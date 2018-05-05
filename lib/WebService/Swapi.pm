@@ -1,4 +1,4 @@
-package Webservice::Swapi;
+package WebService::Swapi;
 
 use 5.008001;
 use strict;
@@ -22,7 +22,7 @@ sub BUILD {
     my ($self) = @_;
 
     $self->set_persistent_header('User-Agent' => __PACKAGE__ . q| |
-          . ($Webservice::Swapi::VERSION || q||));
+          . ($WebService::Swapi::VERSION || q||));
     $self->server($self->api_url);
 
     return $self;
@@ -110,14 +110,14 @@ __END__
 
 =head1 NAME
 
-Webservice::Swapi - A Perl module to interface with the Star Wars API
+WebService::Swapi - A Perl module to interface with the Star Wars API
 (swapi.co) webservice.
 
 =head1 SYNOPSIS
 
-    use Webservice::Swapi;
+    use WebService::Swapi;
 
-    $swapi = Webservice::Swapi->new;
+    $swapi = WebService::Swapi->new;
 
     # Check if API server is up
     my $resources = $swapi->ping();
@@ -136,7 +136,7 @@ Webservice::Swapi - A Perl module to interface with the Star Wars API
 
 =head1 DESCRIPTION
 
-Webservice::Swapi is a Perl client helper library for the Star Wars API (swapi.co).
+WebService::Swapi is a Perl client helper library for the Star Wars API (swapi.co).
 
 =head1 DEVELOPMENT
 
@@ -176,17 +176,17 @@ To use Minilla instead. This will update the README.md file from the source.
 
 =head2 new([%$args])
 
-Construct a new Webservice::Swapi instance. Optionally takes a hash or hash reference.
+Construct a new WebService::Swapi instance. Optionally takes a hash or hash reference.
 
     # Instantiate the class.
-    my $swapi = Webservice::Swapi->new;
+    my $swapi = WebService::Swapi->new;
 
 =head3 api_url
 
 The URL of the API resource.
 
     # Instantiate the class by setting the URL of the API endpoints.
-    my $swapi = Webservice::Swapi->new({api_url => 'http://example.com/api/'});
+    my $swapi = WebService::Swapi->new({api_url => 'http://example.com/api/'});
 
 =head2 get_object($object, [$format])
 

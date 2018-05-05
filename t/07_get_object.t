@@ -4,9 +4,9 @@ use utf8;
 
 use Test::More;
 
-use Webservice::Swapi;
+use WebService::Swapi;
 
-my $swapi = Webservice::Swapi->new;
+my $swapi = WebService::Swapi->new;
 
 my $response = $swapi->get_object('films', '1');
 is($response->{title}, 'A New Hope', 'expect film found');

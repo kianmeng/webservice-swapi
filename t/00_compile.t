@@ -5,7 +5,7 @@ use utf8;
 use Test::More;
 
 use_ok $_ for qw(
-    Webservice::Swapi
+    WebService::Swapi
 );
 
 done_testing;
