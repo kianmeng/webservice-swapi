@@ -69,14 +69,14 @@ To use Minilla instead. This will update the README.md file from the source.
 
 Construct a new Webservice::Swapi instance. Optionally takes a hash or hash reference.
 
-- api\_url
-
-    The URL of the API resource.
-
     # Instantiate the class.
     my $swapi = Webservice::Swapi->new;
 
-    # Set the API URL.
+### api\_url
+
+The URL of the API resource.
+
+    # Instantiate the class by setting the URL of the API endpoints.
     my $swapi = Webservice::Swapi->new({api_url => 'http://example.com/api/'});
 
 ## get\_object($object, \[$format\])
