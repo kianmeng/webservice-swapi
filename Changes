@@ -2,6 +2,11 @@ Revision history for Perl extension Webservice-Swapi
 
 {{$NEXT}}
 
+0.1.6  2018-05-06 18:48:39 +08
+
+    - Switch module building to Dist::Milla
+    - Rename module according to standard naming convention
+
 0.1.5 2018-05-04T15:57:13Z
 
     - More details documentation
