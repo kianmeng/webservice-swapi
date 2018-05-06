@@ -22,4 +22,5 @@ nytprof.out
 /_eumm/
 local/
 .cpanm/
-Webservice-Swapi-*/
+WebService-Swapi-*/
+WebService-Swapi-*

@@ -150,27 +150,28 @@ project.
     $ docker build -t webservice-swapi .
     $ docker run -it -v $(pwd):/root webservice-swapi bash
 
-=head2 Carton
+=head2 Milla
 
-To setup the development environment and run the test using Carton.
+Setting up the required packages.
 
-    $ carton install
-    $ export PERL5LIB=$(pwd)/local/lib/perl5/
-    $ export PATH=$HOME/perl5/bin:$(pwd)/local/bin:$PATH
+    $ cpanm Dist::Milla
+    $ milla listdeps --missing | cpanm
 
-To enable Perl::Critic test cases, enable the flag.
+Check you code coverage.
 
-    $ AUTHOR_TESTING=1 carton exec -- prove -Ilib -lv t
+    $ milla cover
 
-=head2 Minilla
+Several ways to run the test.
 
-To use Minilla instead. This will update the README.md file from the source.
+    $ milla test
+    $ milla test --author --release
+    $ AUTHOR_TESTING=1 RELEASE_TESTING=1 milla test
+    $ AUTHOR_TESTING=1 RELEASE_TESTING=1 milla run prove t/01_instantiation.t
 
-    $ cpanm Minilla
-    $ minil build
-    $ minil test
-    $ FAKE_RELEASE=1 minil release # testing
-    $ minil release # actual
+Release the module.
+
+    $ milla build
+    $ milla release
 
 =head1 METHODS
 

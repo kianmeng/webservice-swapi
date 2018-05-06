@@ -1,4 +1,8 @@
-[![Build Status](https://travis-ci.org/kianmeng/webservice-swapi.svg?branch=master)](https://travis-ci.org/kianmeng/webservice-swapi) [![Coverage Status](https://img.shields.io/coveralls/kianmeng/webservice-swapi/master.svg?style=flat)](https://coveralls.io/r/kianmeng/webservice-swapi?branch=master) [![Coverage Status](http://codecov.io/github/kianmeng/webservice-swapi/coverage.svg?branch=master)](https://codecov.io/github/kianmeng/webservice-swapi?branch=master) [![MetaCPAN Release](https://badge.fury.io/pl/WebService-Swapi.svg)](https://metacpan.org/release/WebService-Swapi)
+[![Build Status](https://travis-ci.org/kianmeng/webservice-swapi.svg?branch=master)](https://travis-ci.org/kianmeng/webservice-swapi)
+[![Coverage Status](https://coveralls.io/repos/kianmeng/webservice-swapi/badge.svg?branch=master)](https://coveralls.io/r/kianmeng/webservice-swapi?branch=master)
+[![codecov](https://codecov.io/gh/kianmeng/webservice-swapi/branch/master/graph/badge.svg)](https://codecov.io/gh/kianmeng/webservice-swapi)
+[![Kwalitee status](http://cpants.cpanauthors.org/dist/WebService-Swapi.png)](http://cpants.charsbar.org/dist/overview/WebService-Swapi)
+
 # NAME
 
 WebService::Swapi - A Perl module to interface with the Star Wars API
@@ -41,27 +45,28 @@ project.
     $ docker build -t webservice-swapi .
     $ docker run -it -v $(pwd):/root webservice-swapi bash
 
-## Carton
+## Milla
 
-To setup the development environment and run the test using Carton.
+Setting up the required packages.
 
-    $ carton install
-    $ export PERL5LIB=$(pwd)/local/lib/perl5/
-    $ export PATH=$HOME/perl5/bin:$(pwd)/local/bin:$PATH
+    $ cpanm Dist::Milla
+    $ milla listdeps --missing | cpanm
 
-To enable Perl::Critic test cases, enable the flag.
+Check you code coverage.
 
-    $ AUTHOR_TESTING=1 carton exec -- prove -Ilib -lv t
+    $ milla cover
 
-## Minilla
+Several ways to run the test.
 
-To use Minilla instead. This will update the README.md file from the source.
+    $ milla test
+    $ milla test --author --release
+    $ AUTHOR_TESTING=1 RELEASE_TESTING=1 milla test
+    $ AUTHOR_TESTING=1 RELEASE_TESTING=1 milla run prove t/01_instantiation.t
 
-    $ cpanm Minilla
-    $ minil build
-    $ minil test
-    $ FAKE_RELEASE=1 minil release # testing
-    $ minil release # actual
+Release the module.
+
+    $ milla build
+    $ milla release
 
 # METHODS
 
