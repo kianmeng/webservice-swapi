@@ -2,6 +2,8 @@
 [![Coverage Status](https://coveralls.io/repos/kianmeng/webservice-swapi/badge.svg?branch=master)](https://coveralls.io/r/kianmeng/webservice-swapi?branch=master)
 [![codecov](https://codecov.io/gh/kianmeng/webservice-swapi/branch/master/graph/badge.svg)](https://codecov.io/gh/kianmeng/webservice-swapi)
 [![Kwalitee status](http://cpants.cpanauthors.org/dist/WebService-Swapi.png)](http://cpants.charsbar.org/dist/overview/WebService-Swapi)
+[![Cpan license](https://img.shields.io/cpan/l/WebService-Swapi.svg)](https://metacpan.org/release/WebService-Swapi)
+[![Cpan version](https://img.shields.io/cpan/v/WebService-Swapi.svg)](https://metacpan.org/release/WebService-Swapi)
 
 # NAME
 
