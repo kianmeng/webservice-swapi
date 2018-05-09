@@ -1,12 +1,12 @@
 package WebService::Swapi;
 
-use 5.008001;
-use strict;
-use warnings;
 use utf8;
 
 use Moo;
 use Types::Standard qw(Str);
+
+use strictures 2;
+use namespace::clean;
 
 with 'Role::REST::Client';
 
