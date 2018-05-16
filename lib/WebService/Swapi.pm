@@ -149,6 +149,7 @@ project.
 
     $ docker build -t webservice-swapi .
     $ docker run -it -v $(pwd):/root webservice-swapi bash
+    # cpanm --installdeps --notest .
 
 =head2 Milla
 
