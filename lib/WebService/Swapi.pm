@@ -10,7 +10,7 @@ use namespace::clean;
 
 with 'Role::REST::Client';
 
-our $VERSION = '0.1.6';
+our $VERSION = '0.1.7';
 
 has api_url => (
     isa     => Str,
