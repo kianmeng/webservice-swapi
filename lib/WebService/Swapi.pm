@@ -144,7 +144,7 @@ project.
 
 Setting up the required packages.
 
-    $ cpanm Dist::Milla
+    $ milla authordeps --missing | cpanm
     $ milla listdeps --missing | cpanm
 
 Check you code coverage.
