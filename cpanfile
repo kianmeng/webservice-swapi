@@ -12,6 +12,7 @@ on 'test' => sub {
     requires 'Devel::Cover';
     requires 'Devel::Cover::Report::Coveralls';
     requires 'Devel::Cover::Report::Codecov';
+    requires 'Dist::Zilla::App::Command::cover';
     requires 'Test::More';
     requires 'Test::Perl::Critic';
     requires 'Test::Pod';
