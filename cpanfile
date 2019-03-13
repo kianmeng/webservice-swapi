@@ -21,8 +21,9 @@ on 'test' => sub {
 };
 
 on 'develop' => sub {
+    recommends 'Devel::NYTProf';
     requires 'App::CISetup';
     requires 'App::Software::License';
     requires 'Dist::Milla';
-    recommends 'Devel::NYTProf';
+    requires 'Dist::Zilla::App::Command::cover';
 };
