@@ -12,8 +12,8 @@ with 'Role::REST::Client';
 our $VERSION = '0.1.7';
 
 has api_url => (
-    isa     => Str,
-    is      => 'rw',
+    isa => Str,
+    is => 'rw',
     default => sub { 'https://swapi.co/api/' },
 );
 
@@ -21,7 +21,7 @@ sub BUILD {
     my ($self) = @_;
 
     $self->set_persistent_header('User-Agent' => __PACKAGE__ . q| |
-          . ($WebService::Swapi::VERSION || q||));
+        . ($WebService::Swapi::VERSION || q||));
     $self->server($self->api_url);
 
     return $self;
