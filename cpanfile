@@ -1,12 +1,13 @@
 requires 'perl', '5.008001';
 
+requires 'strictures', '2';
+requires 'namespace::clean';
 requires 'Data::Serializer';
 requires 'Moo';
 requires 'JSON';
 requires 'REST::Client';
 requires 'Role::REST::Client';
 requires 'Types::Standard';
-requires 'namespace::clean';
 
 on 'test' => sub {
     requires 'Devel::Cover';
