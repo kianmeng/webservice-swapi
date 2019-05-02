@@ -21,7 +21,7 @@ sub BUILD {
     my ($self) = @_;
 
     $self->set_persistent_header('User-Agent' => __PACKAGE__ . q| |
-        . ($WebService::Swapi::VERSION || q||));
+            . ($WebService::Swapi::VERSION || q||));
     $self->server($self->api_url);
 
     return $self;
@@ -74,7 +74,7 @@ sub _request {
 
     # In case the api_url was updated.
     $self->server($self->api_url);
-    $self->type(qq|application/json|);
+    $self->type(q|application/json|);
 
     my @paths;
     push @paths, $object if (defined $object);
@@ -96,10 +96,12 @@ __END__
 
 =encoding utf-8
 
+=for stopwords swapi
+
 =head1 NAME
 
-WebService::Swapi - A Perl module to interface with the Star Wars API
-(swapi.co) webservice.
+WebService::Swapi - Perl library for accessing the Star Wars data,
+http://swapi.co
 
 =head1 SYNOPSIS
 
@@ -128,7 +130,7 @@ WebService::Swapi is a Perl client helper library for the Star Wars API (swapi.c
 
 =head1 DEVELOPMENT
 
-Source repo at L<https://github.com/kianmeng/webservice-swapi|https://github.com/kianmeng/webservice-swapi>.
+Source repository at L<https://github.com/kianmeng/webservice-swapi|https://github.com/kianmeng/webservice-swapi>.
 
 =head2 Docker
 

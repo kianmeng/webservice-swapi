@@ -3,8 +3,8 @@
 
 # NAME
 
-WebService::Swapi - A Perl module to interface with the Star Wars API
-(swapi.co) webservice.
+WebService::Swapi - Perl library for accessing the Star Wars data,
+http://swapi.co
 
 # SYNOPSIS
 
@@ -33,7 +33,7 @@ WebService::Swapi is a Perl client helper library for the Star Wars API (swapi.c
 
 # DEVELOPMENT
 
-Source repo at [https://github.com/kianmeng/webservice-swapi](https://github.com/kianmeng/webservice-swapi).
+Source repository at [https://github.com/kianmeng/webservice-swapi](https://github.com/kianmeng/webservice-swapi).
 
 ## Docker
 

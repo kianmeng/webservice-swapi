@@ -1,5 +1,5 @@
 {
-   "abstract" : "A Perl module to interface with the Star Wars API (swapi.co) webservice.",
+   "abstract" : "Perl library for accessing the Star Wars data, http://swapi.co",
    "author" : [
       "Kian-Meng, Ang <kianmeng@cpan.org>"
    ],
