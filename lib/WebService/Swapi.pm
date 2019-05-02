@@ -224,6 +224,10 @@ Searching by keywords. Takes both an object and keywords. Optionally takes a ret
     my $results = $swapi->search('people', 'solo', 'json');
     my $results = $swapi->search('people', 'solo', 'wookiee');
 
+=head1 AUTHOR
+
+Kian-Meng, Ang E<lt>kianmeng@cpan.orgE<gt>
+
 =head1 COPYRIGHT AND LICENSE
 
 This software is Copyright (c) 2017 by Kian Meng, Ang.
@@ -231,9 +235,5 @@ This software is Copyright (c) 2017 by Kian Meng, Ang.
 This is free software, licensed under:
 
     The Artistic License 2.0 (GPL Compatible)
-
-=head1 AUTHOR
-
-Kian-Meng, Ang E<lt>kianmeng@users.noreply.github.comE<gt>
 
 =cut

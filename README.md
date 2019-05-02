@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/kianmeng/webservice-swapi.svg?branch=master)](https://travis-ci.org/kianmeng/webservice-swapi)
 [![Cpan license](https://img.shields.io/cpan/l/WebService-Swapi.svg)](https://metacpan.org/release/WebService-Swapi)
 [![Cpan version](https://img.shields.io/cpan/v/WebService-Swapi.svg)](https://metacpan.org/release/WebService-Swapi)
 
@@ -130,6 +129,10 @@ Searching by keywords. Takes both an object and keywords. Optionally takes a ret
     my $results = $swapi->search('people', 'solo', 'json');
     my $results = $swapi->search('people', 'solo', 'wookiee');
 
+# AUTHOR
+
+Kian-Meng, Ang <kianmeng@cpan.org>
+
 # COPYRIGHT AND LICENSE
 
 This software is Copyright (c) 2017 by Kian Meng, Ang.
@@ -137,7 +140,3 @@ This software is Copyright (c) 2017 by Kian Meng, Ang.
 This is free software, licensed under:
 
     The Artistic License 2.0 (GPL Compatible)
-
-# AUTHOR
-
-Kian-Meng, Ang <kianmeng@users.noreply.github.com>
